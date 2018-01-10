@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title> 
+	
+	 <!-- Bootstrap core CSS -->
+    <link href="css/bootstraporiginal.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">   
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/colpick.css" />
+    
+    <script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+    <script src="js/colpick.js"></script>
+    <script src="js/cs.js"></script>
+    
+    
+    <style>
+		
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+				<div class="toppanel">
+				
+					<!--div class="btn-group">
+						<div class="btn btn-default btn-lg">Кнопка 1</div>
+						<div class="btn btn-default btn-lg">Кнопка 2</div>
+						<div class="btn btn-default btn-lg">Кнопка 3</div>
+						<div class="btn btn-default btn-lg">Кнопка 4</div>
+						<div class="btn btn-default btn-lg">Кнопка 5</div>
+						<div class="btn btn-default btn-lg">Кнопка 6</div>
+						<div class="btn btn-default btn-lg">Кнопка 7</div>
+						<div class="btn btn-default btn-lg">Кнопка 8</div>
+						<div class="btn btn-default btn-lg">Кнопка 9</div>
+						<div class="btn btn-default btn-lg">Кнопка 10</div>
+					</div-->
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2"  style="background: #000; padding: 3em 1.5em ; ">
+				<div class="btn-group-vertical">
+					<button class="btn btn-default btn-lg" id="section"><span class="glyphicon glyphicon-align-justify"></span> Секция</button>
+					<button class="btn btn-default btn-lg" id="div"><span class="glyphicon glyphicon-th-large"></span> Блок</button>
+					<button class="btn btn-default btn-lg" id="img"><span class="glyphicon glyphicon-picture"></span> Изображение</button>
+					<button class="btn btn-default btn-lg" id="p"><span class="glyphicon glyphicon-font"></span> Текст</button>
+					<button class="btn btn-default" id="test">2</button>
+					<button class="btn btn-default" id="lup"><span class="glyphicon glyphicon-chevron-up"></span>z-index +</button>
+					<button class="btn btn-default" id="ldn"><span class="glyphicon glyphicon-chevron-down"></span>z-index -</button>
+				</div>
+			</div>
+			<div class="col-sm-8 work">
+
+			</div>
+			<div class="col-sm-2 text-left" style="position: relative">
+				<input type="text" id="src">
+				
+				<br>
+				<div class="row">
+					Lorem ipsum dolor. 
+					<div id="colorSelector" style="display: inline-block;">
+						<div style="background-color: rgb(105, 105, 184);"></div>
+					</div>
+				</div>
+				<div class="row">Lorem ipsum dolor. <input type="text" id="qaz" style="display:inline-block"></div>
+				<div class="row">Цвет фона <div class="color-box" id="bgCol"></div></div>
+				<div class="row">Цвет шрифта <div class="color-box" id="fontCol"></div></div>
+				<div class="row">Цвет обводки <div class="color-box" id="strokeCol"></div></div>
+				<div class="row">Цвет тени <div class="color-box" id="shadowCol"></div></div>
+				
+				<div class="row">Прозрачность 
+					<span id="opacity">100%</span>
+					<div style="width: 80%;" id="opaSlider"></div>
+				</div>
+				<div class="row">Прозрачность фона
+					<span id="opacity">100%</span>
+					<div style="width: 80%;" id="opabgSlider"></div>
+				</div>
+			</div>
+				
+		</div>
+	</div>
+
+	<script>
+	$("#opaSlider").slider({
+		range: "min",
+		min: 10,
+		max: 100,
+		value: 100,
+		slide: function( event, ui ) {
+			$( ".sel" ).css( "opacity" , ui.value*.01 );
+			$( "#opacity" ).text(ui.value + "%");
+		}
+	});
+	</script>
+	
+</body>
+</html>
